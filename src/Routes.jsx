@@ -5,16 +5,12 @@ import Products from "./pages/Products";
 import Tickets from "./pages/Tickets";
 import TicketDetails from "c:/Users/TSI/Downloads/React-102-layout-for-dashboard/source/src/pages/TicketDetails/page";
 import Comments from "./pages/Comments";
+import RootLayout from "./components/layouts/RootLayout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <div>
-        <h1>hello</h1>
-        <Outlet />
-      </div>
-    ),
+    element: (<RootLayout/>),
     children: [
       {
         index: true,
