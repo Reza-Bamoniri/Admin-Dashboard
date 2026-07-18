@@ -1,11 +1,25 @@
 import React from 'react'
-import { Outlet } from 'react-router'
+import { Outlet, ScrollRestoration } from 'react-router'
+import Header from "../Header/Header"
+import Sidebar from "../Sidebar/Sidebar"
 
 const RootLayout = () => {
   return (
     <>
-    <h1>Hello</h1>
+
+    <Header/>
+
+
+    <Sidebar/>
+
+
+    <main>
+
     <Outlet/>
+
+    </main>
+
+    <ScrollRestoration/>
     </>
   )
 }
