@@ -6,18 +6,20 @@ import Sidebar from "../Sidebar/Sidebar"
 const RootLayout = () => {
   return (
     <>
-
-    <Header/>
-
-
-    <Sidebar/>
+      <div className='flex'>
+           <Sidebar/>
 
 
-    <main>
+           <Header/>
 
-    <Outlet/>
 
-    </main>
+             <main>
+
+               <Outlet/>
+
+             </main>
+      </div>
+    
 
     <ScrollRestoration/>
     </>
