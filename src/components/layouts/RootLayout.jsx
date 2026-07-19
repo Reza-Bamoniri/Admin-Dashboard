@@ -15,7 +15,7 @@ const RootLayout = () => {
 
              <main className="mt-6 container mx-auto"> 
               
-                 <div>
+                 <div className='relative z-10'>
                    <Outlet/>
                  </div>
                    

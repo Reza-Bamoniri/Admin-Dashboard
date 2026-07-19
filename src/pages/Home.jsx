@@ -1,8 +1,19 @@
 import React from 'react'
+import SectionTitle from '../components/common/SectionTitle'
+import CallToAction from '../components/common/CallToAction'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <SectionTitle title="Dashboard" button={<CallToAction/>} />
+      {/* <Summaries /> */}
+
+      <div className="">
+        {/* <DetailsCharts />
+        <ProductsTable />
+        <QuickOverview /> */}
+      </div>
+    </>
   )
 }
 
