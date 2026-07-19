@@ -13,7 +13,7 @@ const Header = () => {
 
 
 
-          <div className='flex'>
+          <div className='flex items-center'>
               <Notification/>
               <Divider/>
               <Profile/>

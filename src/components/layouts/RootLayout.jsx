@@ -2,6 +2,7 @@ import React from 'react'
 import { Outlet, ScrollRestoration } from 'react-router'
 import Header from "../Header/Header"
 import Sidebar from "../Sidebar/Sidebar"
+import BackgroundOverlay from '../common/BackgroundOverlay'
 
 const RootLayout = () => {
   return (
@@ -17,7 +18,9 @@ const RootLayout = () => {
                  <div>
                    <Outlet/>
                  </div>
+                   
 
+                   <BackgroundOverlay/>
              </main>
            </section>
 
