@@ -2,7 +2,7 @@ import { BiShoppingBag } from "react-icons/bi";
 import { HiDocumentText, HiUsers } from "react-icons/hi";
 import { RiAdminFill } from "react-icons/ri";
 
-const generateSummaries = (
+const generateSummariesInfo = (
   productsLength = 0,
   usersLength = 0,
   ticketsLength = 0,
@@ -36,4 +36,4 @@ const generateSummaries = (
   ];
 };
 
-export { generateSummaries };
+export { generateSummariesInfo };
