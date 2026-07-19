@@ -9,15 +9,19 @@ const RootLayout = () => {
       <div className='flex'>
            <Sidebar/>
 
-
+           <section className="grow *:px-6">
            <Header/>
 
-
-             <main>
-
-               <Outlet/>
+             <main className="mt-6 container mx-auto"> 
+              
+                 <div>
+                   <Outlet/>
+                 </div>
 
              </main>
+           </section>
+
+
       </div>
     
 
