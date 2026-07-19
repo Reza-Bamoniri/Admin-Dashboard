@@ -1,12 +1,13 @@
 import React from 'react'
 import SectionTitle from '../components/common/SectionTitle'
 import CallToAction from '../components/common/CallToAction'
+import Summaries from '../components/Summaries/Summaries'
 
 const Home = () => {
   return (
     <>
       <SectionTitle title="Dashboard" button={<CallToAction/>} />
-      {/* <Summaries /> */}
+      <Summaries />
 
       <div className="">
         {/* <DetailsCharts />

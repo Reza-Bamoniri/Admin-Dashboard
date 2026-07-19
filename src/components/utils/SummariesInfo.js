@@ -3,10 +3,10 @@ import { HiDocumentText, HiUsers } from "react-icons/hi";
 import { RiAdminFill } from "react-icons/ri";
 
 const generateSummariesInfo = (
-  productsLength = 0,
-  usersLength = 0,
-  ticketsLength = 0,
-  adminsLength = 0,
+  productsLength,
+  usersLength ,
+  ticketsLength,
+  adminsLength
 ) => {
   return [
     {
