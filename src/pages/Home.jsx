@@ -2,6 +2,7 @@ import React from 'react'
 import SectionTitle from '../components/common/SectionTitle'
 import CallToAction from '../components/common/CallToAction'
 import Summaries from '../components/Summaries/Summaries'
+import DetailsCharts from '../components/DetailsCharts/DetailsCharts'
 
 const Home = () => {
   return (
@@ -10,9 +11,9 @@ const Home = () => {
       <Summaries />
 
       <div className="">
-        {/* <DetailsCharts />
-        <ProductsTable />
-        <QuickOverview /> */}
+         <DetailsCharts />
+        {/* <ProductsTable /> */}
+        {/* <QuickOverview />  */}
       </div>
     </>
   )
