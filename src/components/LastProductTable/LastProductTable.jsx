@@ -8,6 +8,7 @@ import TableHeadCell from '../common/Table/elements/TableHeadCell';
 import TableBody from '../common/Table/elements/TableBody';
 import TableRow from '../common/Table/elements/TableRow';
 import TableCell from '../common/Table/elements/TableCell';
+import RemoveProductIcon from './RemoveProductIcon';
 
 const LastProductTable = () => {
   const Buttons = () => {
@@ -48,7 +49,9 @@ const LastProductTable = () => {
                                   </p>
                                  </TableCell>
                                  <TableCell>{product.price.toLocaleString()} $</TableCell>
-                                 <TableCell>xxx</TableCell>
+                                 <TableCell>
+                                     <RemoveProductIcon/>
+                                 </TableCell>
                             </TableRow>
                     })
                 }

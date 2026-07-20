@@ -1,12 +1,13 @@
 import React from 'react'
 import { HiOutlineTrash } from 'react-icons/hi';
+import Modal from '../common/Modal';
 
 const RemoveProductIcon = () => {
 
 
 
     const Trigger = () => {
-       return <button className="cursor-pointer text-xl text-red-500">
+       return <button className="cursor-pointer text-xl text-pink-500">
                <HiOutlineTrash className="text-xl" />
               </button>
       };
@@ -15,7 +16,7 @@ const RemoveProductIcon = () => {
 
 
   return (
-    <div>RemoveProductIcon</div>
+    <Modal title="Delete Product" Trigger={<Trigger/>} ></Modal>
   )
 }
 
