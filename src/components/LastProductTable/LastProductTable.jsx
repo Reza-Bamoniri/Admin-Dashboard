@@ -10,6 +10,7 @@ import TableRow from '../common/Table/elements/TableRow';
 import TableCell from '../common/Table/elements/TableCell';
 import RemoveProductIcon from './RemoveProductIcon';
 import ChangePublication from './ChangePublication';
+import EditProductIcon from './EditProductIcon';
 
 const LastProductTable = () => {
   const Buttons = () => {
@@ -54,7 +55,7 @@ const LastProductTable = () => {
                                   <div className='flex items-center gap-3'>
                                      <RemoveProductIcon/>
                                      <ChangePublication/>
-                                     
+                                     <EditProductIcon/>
                                   </div>
                                  </TableCell>
                             </TableRow>
