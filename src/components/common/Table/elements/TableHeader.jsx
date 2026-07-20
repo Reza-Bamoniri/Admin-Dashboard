@@ -2,7 +2,7 @@ import React from "react";
 import Filter from "./Filter"
 import Search from "./Search"
 
-const TableHeader = (header) => {
+const TableHeader = ({header}) => {
   const { Buttons } = header;
   return (
     <div className="flex items-center justify-between px-5 h-16">

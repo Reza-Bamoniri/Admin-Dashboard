@@ -3,6 +3,7 @@ import SectionTitle from '../components/common/SectionTitle'
 import CallToAction from '../components/common/CallToAction'
 import Summaries from '../components/Summaries/Summaries'
 import DetailsCharts from '../components/DetailsCharts/DetailsCharts'
+import LastProductTable from '../components/LastProductTable/LastProductTable'
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
 
       <div className="">
          <DetailsCharts />
-        {/* <ProductsTable /> */}
+        <LastProductTable />
         {/* <QuickOverview />  */}
       </div>
     </>
