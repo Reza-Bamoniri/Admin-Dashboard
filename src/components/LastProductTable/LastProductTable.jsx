@@ -40,14 +40,14 @@ const LastProductTable = () => {
                      return  <TableRow key={product.id}>
                                  <TableCell>{product.id.slice(0, 10)}...</TableCell>
                                  <TableCell>{product.title}</TableCell>
-                                 <TableCell>{product.price.toLocaleString()} $</TableCell>
                                  <TableCell>
                                   <p className={product.isPublished ? "success-badge badge" : " badge danger-badge" }>
                                     {
-                                        product.isPublished ? "Public" : "Private"
+                                      product.isPublished ? "Public" : "Private"
                                     }
                                   </p>
                                  </TableCell>
+                                 <TableCell>{product.price.toLocaleString()} $</TableCell>
                                  <TableCell>xxx</TableCell>
                             </TableRow>
                     })
