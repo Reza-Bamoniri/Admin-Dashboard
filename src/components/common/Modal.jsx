@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { BiX } from 'react-icons/bi'
+import ModalFooter from './ModalFooter'
 
-const Modal = ({Trigger, title, children}) => {
+const Modal = ({Trigger, title, children, onSubmit}) => {
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -39,7 +40,7 @@ const Modal = ({Trigger, title, children}) => {
           </div>
 
           <div className="min-h-14 flex items-center justify-end gap-2 px-4 bg-[#F6F8FA]">
-            {/* <ModalFooter onSubmit={onSubmit} onClose={closeModal} /> */}
+            <ModalFooter onSubmit={onSubmit} onClose={closeModal} />
           </div>
         </div>
       </div>

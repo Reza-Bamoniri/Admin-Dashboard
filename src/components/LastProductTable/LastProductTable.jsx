@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdOpenInNew } from 'react-icons/md';
 import Table from "../common/Table/Table";
 import { Link } from "react-router";
@@ -13,6 +13,16 @@ import ChangePublication from './ChangePublication';
 import EditProductIcon from './EditProductIcon';
 
 const LastProductTable = () => {
+
+const [lastProducts, setLastProducts] = useState([...products])
+
+
+const removeProduct = (id) => {
+  const updatedProducts = lastProducts.filter((product) => product.id !== id )
+  setLastProducts(updatedProducts)
+}
+
+
   const Buttons = () => {
     return (
       <Link
@@ -39,7 +49,7 @@ const LastProductTable = () => {
 
               <TableBody>
                 {
-                    products.map((product) => {
+                    lastProducts.map((product) => {
                      return  <TableRow key={product.id}>
                                  <TableCell>{product.id.slice(0, 10)}...</TableCell>
                                  <TableCell>{product.title}</TableCell>
@@ -53,9 +63,9 @@ const LastProductTable = () => {
                                  <TableCell>{product.price.toLocaleString()} $</TableCell>
                                  <TableCell>
                                   <div className='flex items-center gap-3'>
-                                     <RemoveProductIcon/>
-                                     <ChangePublication/>
-                                     <EditProductIcon/>
+                                     <RemoveProductIcon product={product} handleRemove={removeProduct}/>
+                                     <ChangePublication product={product}/>
+                                     <EditProductIcon product={product}/>
                                   </div>
                                  </TableCell>
                             </TableRow>
