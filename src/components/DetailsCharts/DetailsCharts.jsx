@@ -17,7 +17,13 @@ const DetailsCharts = () => {
                         <Bar dataKey="value" fill="oklch(51.1% 0.262 276.966)"/>
                         <XAxis dataKey="title"/>
                         <YAxis/>
-                        <Tooltip/>
+                        <Tooltip content={(active, payload, label) => {console.log(active);
+                        
+                        
+                           return     <div className="custom-tooltip bg-white text-purple-800 p-2 border border-indigo-800 shadow rounded">
+                                            <p className='label'>{active?.label} : {active?.payload[0]?.payload.value}</p>
+                                     </div> 
+                        }}/>
                     </BarChart>
                 </ResponsiveContainer>
             </div>
