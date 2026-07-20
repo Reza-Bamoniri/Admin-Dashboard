@@ -9,6 +9,7 @@ import TableBody from '../common/Table/elements/TableBody';
 import TableRow from '../common/Table/elements/TableRow';
 import TableCell from '../common/Table/elements/TableCell';
 import RemoveProductIcon from './RemoveProductIcon';
+import ChangePublication from './ChangePublication';
 
 const LastProductTable = () => {
   const Buttons = () => {
@@ -50,7 +51,11 @@ const LastProductTable = () => {
                                  </TableCell>
                                  <TableCell>{product.price.toLocaleString()} $</TableCell>
                                  <TableCell>
+                                  <div className='flex items-center gap-3'>
                                      <RemoveProductIcon/>
+                                     <ChangePublication/>
+                                     
+                                  </div>
                                  </TableCell>
                             </TableRow>
                     })
