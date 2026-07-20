@@ -2,6 +2,12 @@ import React from 'react'
 import { MdOpenInNew } from 'react-icons/md';
 import Table from "../common/Table/Table";
 import { Link } from "react-router";
+import TableHead from '../common/Table/elements/TableHead';
+import { productsTableHeadRow, products } from '../../data/products';
+import TableHeadCell from '../common/Table/elements/TableHeadCell';
+import TableBody from '../common/Table/elements/TableBody';
+import TableRow from '../common/Table/elements/TableRow';
+import TableCell from '../common/Table/elements/TableCell';
 
 const LastProductTable = () => {
   const Buttons = () => {
@@ -19,7 +25,36 @@ const LastProductTable = () => {
   return (
     <div>
       <Table header={{ title: "Products", Buttons: Buttons }}>
-        {/* Children */}
+        <TableHead>
+            {
+                productsTableHeadRow.map(( (item) => {
+                    return <TableHeadCell key={item}>{item}</TableHeadCell>
+                }))
+            }
+        </TableHead>
+
+
+              <TableBody>
+                {
+                    products.map((product) => {
+                     return  <TableRow key={product.id}>
+                                 <TableCell>{product.id.slice(0, 10)}...</TableCell>
+                                 <TableCell>{product.title}</TableCell>
+                                 <TableCell>{product.price.toLocaleString()} $</TableCell>
+                                 <TableCell>
+                                  <p className={product.isPublished ? "success-badge badge" : " badge danger-badge" }>
+                                    {
+                                        product.isPublished ? "Public" : "Private"
+                                    }
+                                  </p>
+                                 </TableCell>
+                                 <TableCell>xxx</TableCell>
+                            </TableRow>
+                    })
+                }
+              </TableBody>
+
+
       </Table>
     </div>
   );
