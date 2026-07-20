@@ -11,7 +11,7 @@ const DetailsCharts = () => {
     <div className="p-5 space-y-10 bg-white border rounded-xl primary-border-color mt-7">
             <p className='text-lg'>General statistics</p>
 
-            <div className="w-full h-100">
+            <div className="w-full h-110">
                 <ResponsiveContainer>
                     <BarChart data={summaries}>
                         <Bar dataKey="value" fill="oklch(51.1% 0.262 276.966)"/>
