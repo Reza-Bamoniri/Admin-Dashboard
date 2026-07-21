@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Users from "./pages/Users";
 import Products from "./pages/Products";
 import Tickets from "./pages/Tickets";
-import TicketDetails from "c:/Users/TSI/Downloads/React-102-layout-for-dashboard/source/src/pages/TicketDetails/page";
+import TicketDetails from "./pages/TicketDetails";
 import Comments from "./pages/Comments";
 import RootLayout from "./components/layouts/RootLayout";
 

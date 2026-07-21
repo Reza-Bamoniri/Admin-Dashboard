@@ -9,7 +9,7 @@
 }
 
 @utility primary-bg {
-  @apply bg-linear-to-t cursor-pointer duration-150  hover:opacity-90 transition-all text-white rounded-md focus-within:ring-2 focus-within:ring-teal-500/60 from-[#019d79] to-[#00bf8f]  border border-[#1bd1a7];
+  @apply bg-linear-to-t cursor-pointer duration-150  hover:opacity-90 transition-all text-white rounded-md focus-within:ring-2 focus-within:ring-gray-100/10 from-[#1b33bd] to-[#490b99]  border border-[#290f99];
 }
 
 @utility flex-center {
