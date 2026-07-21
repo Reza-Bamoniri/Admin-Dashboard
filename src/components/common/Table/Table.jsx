@@ -1,7 +1,8 @@
 import React from 'react'
 import TableHeader from './elements/TableHeader'
+import Pagination from './Pagination'
 
-const Table = ({header = { title:undefined, Buttons: undefined}, children}) => {
+const Table = ({header = { title:undefined, Buttons: undefined}, children, products, setProducts}) => {
 
 
     
@@ -10,6 +11,8 @@ const Table = ({header = { title:undefined, Buttons: undefined}, children}) => {
     <div className="mt-10 border min-w-full! bg-white primary-border-color rounded-xl overflow-hidden">
         <TableHeader header={header} />
       <div>{children}</div>
+
+      <Pagination products={products} setProducts={setProducts}/>
     </div>
   )
 }
