@@ -23,6 +23,21 @@ const removeProduct = (id) => {
 }
 
 
+const ChangePublicationProduct = (id) => {
+  const updatedProducts = lastProducts.map((product) => {
+    return product.id === id ? {...product, isPublished:!product.isPublished} : {...product}
+  } )
+
+  setLastProducts(updatedProducts)
+}
+
+
+
+
+
+
+
+
   const Buttons = () => {
     return (
       <Link
@@ -64,7 +79,7 @@ const removeProduct = (id) => {
                                  <TableCell>
                                   <div className='flex items-center gap-3'>
                                      <RemoveProductIcon product={product} handleRemove={removeProduct}/>
-                                     <ChangePublication product={product}/>
+                                     <ChangePublication product={product} handlePublication={ChangePublicationProduct}/>
                                      <EditProductIcon product={product}/>
                                   </div>
                                  </TableCell>
