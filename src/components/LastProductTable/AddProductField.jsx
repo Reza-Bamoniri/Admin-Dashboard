@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AddProductField = () => {
+const AddProductField = ({newProduct, setNewProduct}) => {
 
 
 
@@ -15,6 +15,11 @@ const AddProductField = () => {
 
 
 
+    const handleChange = (key, value) => {
+     const thisProduct = {...newProduct,[key]: key==="price" ? +value : value}
+       
+     setNewProduct(thisProduct)
+    }
 
 
 
@@ -28,7 +33,7 @@ const AddProductField = () => {
 
                       {
                         item.type === "textarea" ? 
-                        <textarea className="block mt-2 text-sm min-h-35 px-3 rounded-md bg-linear-to-t from-zinc-100/70 shadow placeholder:text-sm border outline-none primary-border-color w-full" />
+                        <textarea value={newProduct[item.key]} onChange={(event) => {handleChange(item.key,event.target.value)}} className="block mt-2 text-sm min-h-35 px-3 rounded-md bg-linear-to-t from-zinc-100/70 shadow placeholder:text-sm border outline-none primary-border-color w-full" />
                       : item.type === "select" ? 
 
                       <select className="block mt-2 px-3 rounded-md bg-linear-to-t from-zinc-100/70 shadow placeholder:text-sm h-10 border outline-none primary-border-color w-full"
@@ -37,7 +42,7 @@ const AddProductField = () => {
                          <option value="false">Unpublished</option>
                       </select> :
 
-                      <input type={item.type}className="block mt-2 px-3 rounded-md bg-linear-to-t from-zinc-100/70 shadow placeholder:text-sm h-10 border outline-none primary-border-color w-full"/>
+                      <input value={newProduct[item.key]} onChange={(event) => {handleChange(item.key,event.target.value)}} type={item.type}className="block mt-2 px-3 rounded-md bg-linear-to-t from-zinc-100/70 shadow placeholder:text-sm h-10 border outline-none primary-border-color w-full"/>
                     }
 
                 </div>

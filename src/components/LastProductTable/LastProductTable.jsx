@@ -12,7 +12,7 @@ import RemoveProductIcon from "./RemoveProductIcon";
 import ChangePublication from "./ChangePublication";
 import EditProductIcon from "./EditProductIcon";
 
-const LastProductTable = () => {
+const LastProductTable = ({allProducts}) => {
   const [lastProducts, setLastProducts] = useState([...products]);
 
   const removeProduct = (id) => {
@@ -45,7 +45,7 @@ const LastProductTable = () => {
   return (
     <div>
       <Table header={{ title: "Products", Buttons: Buttons }}
-       products={products} setProducts={setLastProducts}>
+       products={allProducts} setProducts={setLastProducts}>
 
         
         <TableHead>

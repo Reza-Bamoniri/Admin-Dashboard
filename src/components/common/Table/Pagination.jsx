@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const Pagination = ({products, setProducts, iPP}) => {
+const Pagination = ({products, setProducts, iPP }) => {
     const itemsPerPage = iPP;
     const numberOfPages = Math.ceil(products.length/itemsPerPage)
     console.log(numberOfPages);
@@ -15,12 +15,12 @@ useEffect(() => {
     const startIndex = (currentPage -1) * itemsPerPage
     const endIndex = startIndex + itemsPerPage
 
-    const paginatedItems = products.slice(startIndex, endIndex)
+    const paginatedItems = [...products].reverse().slice(startIndex, endIndex)
 
     setProducts(paginatedItems)
 
   
-}, [currentPage])
+}, [currentPage,products])
 
 
 

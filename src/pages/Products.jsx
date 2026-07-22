@@ -9,13 +9,46 @@ import AddProductField from '../components/LastProductTable/AddProductField';
 
 const Products = () => {
 const [layoutType, setLayoutType] = useState(true);
-const [paginatedProducts, setPaginatedProducts] = useState([...products]);
+const [allProducts, setAllProducts] = useState([...products]);
+const [paginatedProducts, setPaginatedProducts] = useState([]);
+const [newProduct, setNewProduct] = useState({
+  id: crypto.randomUUID(),
+    title: "",
+    description: "",
+    img: "/images/product.jpg",
+    isPublished: false,
+    price: "",
+    entity: "",
+});
  
 const toggleLayout = () => {
     
     setLayoutType(!layoutType);
   };
 
+  
+  
+  const createNewProduct = () => {
+    setAllProducts([...allProducts,newProduct])
+    
+
+    setNewProduct(
+      {
+        id: crypto.randomUUID(),
+        title: "",
+        description: "",
+        img: "/images/product.jpg",
+        isPublished: false,
+        price: "",
+        entity: "",
+      }
+    )
+  }
+  
+  
+  
+  
+  
   const Buttons = (
       <>
         <button
@@ -27,8 +60,8 @@ const toggleLayout = () => {
   
         
 
-        <Modal title="New Product" Trigger={<button className="primary-bg px-3 py-1.5">Add Product</button>}>
-           <AddProductField/>
+        <Modal onSubmit={createNewProduct} title="New Product" Trigger={<button className="primary-bg px-3 py-1.5">Add Product</button>}>
+           <AddProductField newProduct={newProduct} setNewProduct={setNewProduct} />
         </Modal>
       </>
     );
@@ -43,11 +76,14 @@ const toggleLayout = () => {
 
       <section className="mt-10 w-full! min-w-full!">
         {layoutType === true ? (
-          <ProductTableView  />
-        ) : (
-          <ProductsGridView products={products}
+          <ProductTableView products={allProducts}
                       paginatedProducts={paginatedProducts}
                       setProducts={setPaginatedProducts} />
+        ) : (
+          <ProductsGridView products={allProducts}
+                      paginatedProducts={paginatedProducts}
+                      setProducts={setPaginatedProducts} />
+                      
         )}
       </section>
     </>

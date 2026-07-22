@@ -1,9 +1,9 @@
 import React from 'react'
 import LastProductTable from '../LastProductTable/LastProductTable'
 
-const ProductTableView = () => {
+const ProductTableView = ({ products, paginatedProducts, setProducts }) => {
   return (
-    <><LastProductTable/></>
+    <><LastProductTable allProducts={products} /></>
   )
 }
 
