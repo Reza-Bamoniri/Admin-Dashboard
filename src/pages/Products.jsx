@@ -3,9 +3,11 @@ import SectionTitle from '../components/common/SectionTitle'
 import { CiGrid41, CiViewTable } from 'react-icons/ci';
 import ProductsGridView from '../components/ProductsView/ProductsGridView';
 import ProductTableView from '../components/ProductsView/ProductTableView';
+import { products } from '../data/products';
 
 const Products = () => {
 const [layoutType, setLayoutType] = useState(true);
+const [paginatedProducts, setPaginatedProducts] = useState([...products]);
  
 const toggleLayout = () => {
     
@@ -37,7 +39,9 @@ const toggleLayout = () => {
         {layoutType === true ? (
           <ProductTableView  />
         ) : (
-          <ProductsGridView  />
+          <ProductsGridView products={products}
+                      paginatedProducts={paginatedProducts}
+                      setProducts={setPaginatedProducts} />
         )}
       </section>
     </>

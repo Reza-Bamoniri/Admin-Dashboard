@@ -12,7 +12,7 @@ const Table = ({header = { title:undefined, Buttons: undefined}, children, produ
         <TableHeader header={header} />
       <div>{children}</div>
 
-      <Pagination products={products} setProducts={setProducts}/>
+      <Pagination products={products} setProducts={setProducts} iPP={6}/>
     </div>
   )
 }
