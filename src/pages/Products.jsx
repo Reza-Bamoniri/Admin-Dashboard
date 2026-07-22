@@ -4,6 +4,8 @@ import { CiGrid41, CiViewTable } from 'react-icons/ci';
 import ProductsGridView from '../components/ProductsView/ProductsGridView';
 import ProductTableView from '../components/ProductsView/ProductTableView';
 import { products } from '../data/products';
+import Modal from '../components/common/Modal';
+import AddProductField from '../components/LastProductTable/AddProductField';
 
 const Products = () => {
 const [layoutType, setLayoutType] = useState(true);
@@ -23,7 +25,11 @@ const toggleLayout = () => {
           {layoutType === true ? <CiGrid41 /> : <CiViewTable />}
         </button>
   
-        <button className="primary-bg px-3 py-1.5">Add Product</button>
+        
+
+        <Modal title="New Product" Trigger={<button className="primary-bg px-3 py-1.5">Add Product</button>}>
+           <AddProductField/>
+        </Modal>
       </>
     );
 
