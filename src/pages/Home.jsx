@@ -5,6 +5,7 @@ import Summaries from '../components/Summaries/Summaries'
 import DetailsCharts from '../components/DetailsCharts/DetailsCharts'
 import LastProductTable from '../components/LastProductTable/LastProductTable'
 import QuickOverview from '../components/QuickOverview/QuickOverview'
+import { products } from '../data/products'
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
 
       <div className="">
          <DetailsCharts />
-        <LastProductTable />
+        <LastProductTable allProducts={products} />
         <QuickOverview /> 
       </div>
     </>

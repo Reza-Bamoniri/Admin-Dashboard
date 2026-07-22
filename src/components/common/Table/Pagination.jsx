@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react'
 const Pagination = ({products, setProducts, iPP }) => {
     const itemsPerPage = iPP;
     const numberOfPages = Math.ceil(products.length/itemsPerPage)
-    console.log(numberOfPages);
     
+    
+console.log(products);
 
     const [currentPage, setCurrentPage] = useState(1);
 
